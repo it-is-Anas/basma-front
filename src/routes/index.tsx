@@ -6,7 +6,7 @@ import SignUp from '../features/auth/pages/Signup';
 import LogIn from "../features/auth/pages/Login";
 
 
-import UserLayout from "../layouts/userLayout";
+import UserLayout from "../layouts/userLayouts/userLayout";
 
 function Index() {
 

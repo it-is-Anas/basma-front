@@ -23,3 +23,11 @@ export interface link {
     label?:string,
     to?: string,
 };
+
+
+export interface iconBtn{
+    img?: string,
+    alt?: string,
+    cls?: string,
+    label?: string,
+};

@@ -7,6 +7,7 @@ import LogIn from "../features/auth/pages/Login";
 
 
 import UserLayout from "../layouts/userLayouts/userLayout";
+import Task from "../features/user/pages/Task";
 
 function Index() {
 
@@ -15,7 +16,7 @@ function Index() {
       <BrowserRouter>
       <Routes>
         <Route path='/user' element={<UserLayout />} >
-          {/* <Route index ></Route> */}
+          <Route index element={<Task/>} ></Route>
 
         </Route>
         <Route path='log' element={<AuthLayout />}  >

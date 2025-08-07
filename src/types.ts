@@ -17,6 +17,12 @@ export interface button {
     label?: string,
     click?: ()=> void,
 };  
+export interface filterButton extends button {
+    label?: string,
+    click?: ()=> void,
+    active?: boolean 
+};  
+
 
 
 export interface link {

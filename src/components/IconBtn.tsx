@@ -2,7 +2,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import type { iconBtn } from '../types';
 
-export default function IconBtn({img='' , alt='' , cls = '',label='',link=''}:iconBtn){
+export default function IconBtn({img='' , alt='' , cls = '',label='',link='',clsLabel,unactive=true}:iconBtn){
     const navigate = useNavigate();
     const location = useLocation().pathname;
     if(link.length){
@@ -10,20 +10,20 @@ export default function IconBtn({img='' , alt='' , cls = '',label='',link=''}:ic
             navigate(link);
         };
         let actived: string = '';
-        if(location === link){
+        if(location === link && unactive){
             actived = 'bg-[var(--white)] border border-[1.5px] border-[var(--light-blue)] rounded-[3px]';
         }
         return (
             <div onClick={clickHandler} className={"relative mx-[5px] "}>
-                <img src={img} alt={alt} className={"w-[2em]  cursor-pointer "+actived+' '+cls} />
-                <div className="absolute top-[-10px] font-[800] text-[tomato] right-0 ">{label}</div>
+                <img loading='lazy' src={img} alt={alt} className={"w-[2em]  cursor-pointer "+actived+' '+cls} />
+                <div className={"absolute top-[-10px] font-[800] text-[tomato] right-0 "+clsLabel}>{label}</div>
             </div>
         );
     }
     return (
         <div className="relative mx-[5px]">
-            <img src={img} alt={alt} className={"w-[2em]  cursor-pointer "+cls} />
-            <div className="absolute top-[-10px] font-[800] text-[tomato] right-0 ">{label}</div>
+            <img loading='lazy' src={img} alt={alt} className={"w-[2em]  "+cls} />
+            <div className={"absolute top-[-10px] font-[800] text-[tomato] right-0 "+clsLabel}>{label}</div>
         </div>
     );
 

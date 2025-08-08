@@ -9,7 +9,7 @@ export default function TaskCard({ id,title,desc,priority,catagory,user , create
         return (
             <div className={"m-[10px] w-[90%] mx-[auto] bg-[var(--gray)] rounded-[10px]  p-[5px] "+cls}>
                 <div className="w-[100%] mt-[10px] flex justify-start items-start">
-                    <img src={profileImg} alt="" className="w-[2.5em]" />
+                    <img loading='lazy' src={profileImg} alt="" className="w-[2.5em]" />
                     <div className="h-[100%] ml-[10px]">
                         <p className="font-[600]">{ user.firstName } { user.lastName }</p>
                         <p className="font-[500] text-[.8em]">{ createdAt }</p>

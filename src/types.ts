@@ -41,6 +41,8 @@ export interface iconBtn{
     cls?: string,
     label?: string,
     link?: string,
+    unactive?:boolean,
+    clsLabel?: string,
 };
 
 export interface entity extends HTML {

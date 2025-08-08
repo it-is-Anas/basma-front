@@ -1,6 +1,6 @@
 import loginImg from '../../../assets/login.png';
 import HeadLine from '../compoenents/HeadLine';
-import FormButton from '../compoenents/formButton';
+import FormButton from '../../../components/Buttons/formButton';
 import InputFiled from '../compoenents/inputFiled';
 import FormLink from '../compoenents/formLink';
 

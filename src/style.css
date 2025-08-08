@@ -8,7 +8,7 @@
     --light-blue: #7F8CAA;
     --light-green: #B8CFCE;
     --gray: #EAEFEF;
-    --black: #000000;   
+    --black: #2f2f2f;   
     --chat-green: #14b6a4;
     --chat-gray:#e3e9f0;   
 }
@@ -24,8 +24,8 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+    width: 10px;
+    height: 0px;
 }
 
 /* Track */

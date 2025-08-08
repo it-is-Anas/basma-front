@@ -6,7 +6,7 @@ import SideBar from "./components/sideBar";
 
 export default function UserLayout(){
     return (
-        <div className="w-[100dvw] h-[100dvh] bg-[red] grid grid-rows-[4em_1fr]">
+        <div className="w-[100dvw] h-[100dvh]  grid grid-rows-[4em_1fr]">
             <Header  />
             <div className="grid grid-cols-[3em_1fr] overflow-hidden">
                 <SideBar  />

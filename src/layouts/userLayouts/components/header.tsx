@@ -14,7 +14,7 @@ export default function Header(){
             <InputSearch />
             <div className=" max-[767px]:ml-auto flex items-center">
                 <IconBtn key='search' img={searchIcon} cls='hidden max-[767px]:block w-[1.4em]' />
-                <IconBtn key='plus' img={plusIcon} cls='w-[1.4em]' />
+                <IconBtn key='plus' img={plusIcon} cls='w-[1.2em]' />
                 <IconBtn key='noti' img={notiIcon} label="9" />
                 <IconBtn key='profile' img={pofileIcon} />
             </div>

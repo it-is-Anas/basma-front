@@ -10,9 +10,9 @@ interface props {
 export default function SideBar({cls=''}: props){
     return(
         <aside className={"bg-[var(--gray)] flex flex-col justify-start items-center " +cls}>
-            <IconBtn img={taskIcon} cls="mb-[1em] mt-[1em] w-[1.5em]" />
-            <IconBtn img={cubeIcon} cls="mb-[1em] mt-[1em] w-[1.5em]" />
-            <IconBtn img={userIcon} cls="mb-[1em] mt-[1em] w-[1.5em]" />
+            <IconBtn link="/user" img={taskIcon} cls="mb-[1em] mt-[1em] w-[1.5em]" />
+            <IconBtn link="/user/projects" img={cubeIcon} cls="mb-[1em] mt-[1em] w-[1.5em]" />
+            <IconBtn link="/user/teams" img={userIcon} cls="mb-[1em] mt-[1em] w-[1.5em]" />
         </aside>
     );
 }

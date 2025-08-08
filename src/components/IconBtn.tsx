@@ -1,12 +1,30 @@
 
+import { useLocation, useNavigate } from 'react-router-dom';
 import type { iconBtn } from '../types';
 
-export default function IconBtn({img='' , alt='' , cls = '',label=''}:iconBtn){
+export default function IconBtn({img='' , alt='' , cls = '',label='',link=''}:iconBtn){
+    const navigate = useNavigate();
+    const location = useLocation().pathname;
+    if(link.length){
+        const clickHandler = ()=>{
+            navigate(link);
+        };
+        let actived: string = '';
+        if(location === link){
+            actived = 'bg-[var(--white)] border border-[1.5px] border-[var(--light-blue)] rounded-[3px]';
+        }
+        return (
+            <div onClick={clickHandler} className={"relative mx-[5px] "}>
+                <img src={img} alt={alt} className={"w-[2em]  cursor-pointer "+actived+' '+cls} />
+                <div className="absolute top-[-10px] font-[800] text-[tomato] right-0 ">{label}</div>
+            </div>
+        );
+    }
     return (
         <div className="relative mx-[5px]">
             <img src={img} alt={alt} className={"w-[2em]  cursor-pointer "+cls} />
             <div className="absolute top-[-10px] font-[800] text-[tomato] right-0 ">{label}</div>
         </div>
-
     );
+
 }

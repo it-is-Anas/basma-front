@@ -7,8 +7,9 @@ import LogIn from "../features/auth/pages/Login";
 
 
 import UserLayout from "../layouts/userLayouts/userLayout";
-import Task from "../features/user/pages/Task";
-
+import Tasks from "../features/user/pages/tasks";
+import Projects from '../features/user/pages/projects';
+import Teams from "../features/user/pages/teams";
 function Index() {
 
   return (
@@ -16,7 +17,9 @@ function Index() {
       <BrowserRouter>
       <Routes>
         <Route path='/user' element={<UserLayout />} >
-          <Route index element={<Task/>} ></Route>
+          <Route index  element={<Tasks/>} ></Route>
+          <Route path='projects'  element={<Projects/>} ></Route>
+          <Route path='teams'  element={<Teams/>} ></Route>
 
         </Route>
         <Route path='log' element={<AuthLayout />}  >

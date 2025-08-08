@@ -4,7 +4,7 @@ import FormButton from '../../../components/Buttons/formButton';
 import type { task } from '../../../types';
 
 export default function TaskCard({ id,title,desc,priority,catagory,user , createdAt , deadline ,cls=''}: task){
-    const shortDesc = desc.length > 30? desc.slice(0,32) + ' ...':desc;
+    const shortDesc = desc.length > 80? desc.slice(0,72) + ' ...':desc;
     if(id)
         return (
             <div className={"m-[10px] w-[90%] mx-[auto] bg-[var(--gray)] rounded-[10px]  p-[5px] "+cls}>
@@ -15,8 +15,8 @@ export default function TaskCard({ id,title,desc,priority,catagory,user , create
                         <p className="font-[500] text-[.8em]">{ createdAt }</p>
                     </div>
                 </div>
+                <p className="font-[500] px-[5px] text-[.8em] text-[var(--light-blue)]"> { priority } / <span className="text-[var(--light-blue)]">Done</span></p>
                 <p className="w-[100%] px-[5px] pt-[5px] text-[1.2em] font-[600]">{title}</p>
-                <p className="font-[500] px-[5px] text-[.8em] text-[var(--light-blue)]"> { priority } <span className="text-[var(--light-green)]">Done</span></p>
                 <p className="p-[5px] font-[500] text-[.7em]">
                     { shortDesc }
                 </p>

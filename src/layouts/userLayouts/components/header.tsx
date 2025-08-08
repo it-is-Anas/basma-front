@@ -5,12 +5,18 @@ import plusIcon from '../../../assets/plusIcon.png';
 import notiIcon from '../../../assets/notiIcon.png';
 import pofileIcon from '../../../assets/profileIcon.png';
 import searchIcon from '../../../assets/searchIcon.png';
+import AppLogo from "../../../components/appLogo";
 
 
 export default function Header(){
     return (
         <header className="bg-[var(--gray)] flex justify-start items-center">
-            <MiniAppLogo />
+            <span className="ml-[1em] max-[767px]:hidden">
+                <AppLogo />
+            </span>
+            <span className="hidden max-[767px]:block">
+                <MiniAppLogo />
+            </span>
             <InputSearch />
             <div className=" max-[767px]:ml-auto flex items-center">
                 <IconBtn key='search' img={searchIcon} cls='hidden max-[767px]:block w-[1.4em]' />

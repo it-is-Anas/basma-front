@@ -40,7 +40,7 @@ export const TASKS:task[] = [
     {
         id: 1,
         title: 'First Task',
-        desc: 'new task to be here please listn to me , can you hear me !',
+        desc: 'new task to be here please listn to me , can you hear me new task to be here please listn to me , can you hear me new task to be here please listn to me , can you hear me !',
         priority: 'important',
         catagory: ['personlay','work'],
         user: USERS[0],

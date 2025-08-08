@@ -1,5 +1,3 @@
-
-
 import profileIcon from '../../../assets/profileIcon.png';
 import FilterBtn from '../../../components/Buttons/filterBtn';
 import coverImg from '../../../assets/cover.jpg';

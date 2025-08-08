@@ -2,10 +2,10 @@ import MiniAppLogo from "../../../components/miniAppLogo";
 import IconBtn from "../../../components/IconBtn";
 import InputSearch from "./inputSearch";
 import plusIcon from '../../../assets/plusIcon.png';
-import notiIcon from '../../../assets/notiIcon.png';
 import pofileIcon from '../../../assets/profileIcon.png';
 import searchIcon from '../../../assets/searchIcon.png';
 import AppLogo from "../../../components/appLogo";
+import NotificationPopUp from "../PopUps/Notification";
 
 
 export default function Header(){
@@ -21,7 +21,7 @@ export default function Header(){
             <div className=" max-[767px]:ml-auto flex items-center">
                 <IconBtn key='search' img={searchIcon} cls='hidden max-[767px]:block w-[1.4em]' />
                 <IconBtn key='plus' img={plusIcon} cls='w-[1.2em]' />
-                <IconBtn key='noti' img={notiIcon} label="9" />
+                <NotificationPopUp />
                 <IconBtn key='profile' unactive={false} link="/user/profile" img={pofileIcon} />
             </div>
         </header>

@@ -35,7 +35,7 @@ export interface link {
 };
 
 
-export interface iconBtn{
+export interface iconBtn extends button{
     img?: string,
     alt?: string,
     cls?: string,

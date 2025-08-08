@@ -2,7 +2,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import type { iconBtn } from '../types';
 
-export default function IconBtn({img='' , alt='' , cls = '',label='',link='',clsLabel,unactive=true}:iconBtn){
+export default function IconBtn({img='' , alt='' , cls = '',label='',link='',clsLabel,unactive=true,click}:iconBtn){
     const navigate = useNavigate();
     const location = useLocation().pathname;
     if(link.length){
@@ -20,8 +20,15 @@ export default function IconBtn({img='' , alt='' , cls = '',label='',link='',cls
             </div>
         );
     }
+    if(click)
+        return (
+            <div onClick={click} className="relative  cursor-pointer  mx-[5px]">
+                <img loading='lazy' src={img} alt={alt} className={"w-[2em]  "+cls} />
+                <div className={"absolute top-[-10px] font-[800] text-[tomato] right-0 "+clsLabel}>{label}</div>
+            </div>
+        );
     return (
-        <div className="relative mx-[5px]">
+        <div  className="relative mx-[5px]">
             <img loading='lazy' src={img} alt={alt} className={"w-[2em]  "+cls} />
             <div className={"absolute top-[-10px] font-[800] text-[tomato] right-0 "+clsLabel}>{label}</div>
         </div>

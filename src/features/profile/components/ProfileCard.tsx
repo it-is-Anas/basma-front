@@ -1,5 +1,3 @@
-import React from "react";
-
 export function ProfileCard({ profile }: { profile: any }) {
   if (!profile) return null;
   return (

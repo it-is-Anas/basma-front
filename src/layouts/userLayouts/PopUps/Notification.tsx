@@ -1,38 +1,36 @@
 import IconBtn from "../../../components/IconBtn";
 import notiIcon from '../../../assets/notiIcon.png';
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 
 
 export default function NotificationPopUp(){
 
     const [opened,setOpen] = useState<boolean>(false);
-    const popup = useRef(null);
+    const popup = useRef<HTMLDivElement | null>(null);
 
 
     const openPopUp = ()=>{
         setOpen(true);
     };
-    // const closePopUp = ()=>{
-    //     setOpen(false);
-    // };
+    const closePopUp = ()=>{
+        setOpen(false);
+    };
     
-    // fix this 
-    // useEffect(()=>{
-    //     document.addEventListener('click',(event)=>{ 
-    //         if(popup.current && (!event.target === popup.current || !popup.current?.contains(event.target))){
-    //             setOpen(false);
-    //             console.log('pop up')
-    //         }
-    //     });
-    //     return ()=>{
-    //         document.removeEventListener('click',(event)=>{ 
-    //             if(opened && (!event.target === popup.current || !popup.current?.contains(event.target))){
-    //                 setOpen(false);
-    //             }
-    //         });
-    //     };
-    // },[]);
+    // close when clicking outside the popup
+    useEffect(() => {
+        const handleDocumentMouseDown = (event: MouseEvent) => {
+            if (!opened) return;
+                const targetNode = event.target as Node | null;
+            if (popup.current && targetNode && !popup.current.contains(targetNode)) {
+                closePopUp();
+            }
+        };
+            document.addEventListener('mousedown', handleDocumentMouseDown);
+        return () => {
+            document.removeEventListener('mousedown', handleDocumentMouseDown);
+        };
+    }, [opened]);
 
 
 

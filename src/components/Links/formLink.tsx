@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import type { link } from '../../../types';
+import type { link } from '../../types';
 
 export default function FormLink({ label='' , to='/' }: link){
     return (

@@ -1,9 +1,9 @@
 import signupImg from '../../../assets/Signup.png';
 import HeadLine from '../compoenents/HeadLine';
-import DoubleInputFiled from '../compoenents/doubleInputFiled';
+import DoubleInputFiled from '../../../components/Inputs/doubleInputFiled';
 import FormButton from '../../../components/Buttons/formButton';
-import InputFiled from '../compoenents/inputFiled';
-import FormLink from '../compoenents/formLink';
+import InputFiled from '../../../components/Inputs/inputFiled';
+import FormLink from '../../../components/Links/formLink';
 
 
 export default function SignUp(){

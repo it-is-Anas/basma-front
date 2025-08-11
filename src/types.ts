@@ -7,6 +7,8 @@ export interface inputFiled {
     label?: string,
     type?: string,
     placeholder?: string,
+    inputCls?: string,
+    cls?: string,
 };
 
 
@@ -14,6 +16,9 @@ export interface doubleInputFiled extends inputFiled {
     label2?: string,
     type2?: string,
     placeholder2?: string,
+    inputCls?: string,
+    cls?: string,
+    inputBoxcls?:string,
 };
 
 export interface button {

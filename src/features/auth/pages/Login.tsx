@@ -1,8 +1,8 @@
 import loginImg from '../../../assets/login.png';
 import HeadLine from '../compoenents/HeadLine';
 import FormButton from '../../../components/Buttons/formButton';
-import InputFiled from '../compoenents/inputFiled';
-import FormLink from '../compoenents/formLink';
+import InputFiled from '../../../components/Inputs/inputFiled';
+import FormLink from '../../../components/Links/formLink';
 
 
 export default function LogIn(){

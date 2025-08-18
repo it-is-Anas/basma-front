@@ -4,30 +4,38 @@ import FormButton from '../../../components/Buttons/formButton';
 import type { task } from '../../../types';
 
 export default function TaskCard({ id,title,desc,priority,catagory,user , createdAt , deadline ,cls=''}: task){
-    const shortDesc = desc.length > 80? desc.slice(0,72) + ' ...':desc;
+    const shortDesc = desc.length > 155? desc.slice(0,155 ) + ' ...':desc;
     if(id)
         return (
-            <div className={"m-[10px] w-[90%] mx-[auto] bg-[var(--gray)] rounded-[10px]  p-[5px] "+cls}>
-                <div className="w-[100%] mt-[10px] flex justify-start items-start">
-                    <img loading='lazy' src={profileImg} alt="" className="w-[2.5em]" />
-                    <div className="h-[100%] ml-[10px]">
-                        <p className="font-[600]">{ user.firstName } { user.lastName }</p>
-                        <p className="font-[500] text-[.8em]">{ createdAt }</p>
+            <div className={" m-[10px] h-[15.5em]  w-[90%] mx-[auto] bg-[var(--gray)] rounded-[10px]  p-[5px] "+cls}>
+                <div className=" w-[100%] h-[3em] flex justify-start items-center">
+                    <img loading='lazy' src={profileImg} alt="" className="w-[2em] h-[2em] rounded-[50%] object-cover " />
+                    <div className="h-[100%] w-[100%] ml-[5px] flex flex-col justify-center">
+                        <p className="font-[500] text-[.7em]">{ user.firstName } { user.lastName }</p>
+                        <p className="font-[500] text-[.5em]">{ createdAt }</p>
+                    </div>
+                    <div className="">
+                        <p className="font-[500] text-[.5em] mt-[10px] mb-[auto]"> { deadline }</p>
+                        <p className=" font-[500] text-[.5em]  text-[var(--light-blue)]">{priority}</p>
+                        {/* <p className=" font-[500] text-[.6em]  text-[var(--light-blue)]">Done</p> */}
                     </div>
                 </div>
-                <p className="font-[500] px-[5px] text-[.8em] text-[var(--light-blue)]"> { priority } / <span className="text-[var(--light-blue)]">Done</span></p>
-                <p className="w-[100%] px-[5px] pt-[5px] text-[1.2em] font-[600]">{title}</p>
-                <p className="p-[5px] font-[500] text-[.7em]">
+                <div className=" h-[1.5em] flex justify-start items-center">
+                    <p className=" w-[100%] text-[1em] font-[600]">{title}</p>
+                    <p className="text-[.6em] font-[600] text-[var(--light-blue)]">Done</p>
+                    {/* {status} */}
+                </div>
+                <p className=" h-[8em] py-[.5em] font-[500] text-[.7em] ">
                     { shortDesc }
                 </p>
-                <p className="p-[5px] font-[500] text-[.8em]">Deadline:  <span className="text-[var(--light-blue)]"> { deadline }</span></p>
-                <div className="px-[5px] flex justify-start items-center">
+                <div className=" h-[2em] px-[5px] flex justify-start items-center">
                     {
-                        catagory.map((ele,index) => <p key={ele+index} className="text-[11px] px-[5px] py-[.3em] mr-[5px] rounded-[4px] text-[.8em] font-[700] bg-[var(--white)] text-[var(--dark-blue)]">{ele}</p>)
+                        catagory.map((ele,index) => <p key={ele+index} className="text-[10px] px-[5px] py-[.3em] mr-[5px] rounded-[4px] text-[.8em] font-[700] bg-[var(--white)] text-[var(--dark-blue)]">{ele}</p>)
                     }
                 </div>
-                <div className="flex ">
-                    <FormButton cls='text-[.7em] w-[80%] my-[10px] mx-[auto] bg-[var(--light-green)]' label='Set comment'  />
+                <div className="  h-[3em] flex justify-end items-center ">
+                    <FormButton cls='text-[.7em] w-[auto] !py-[2px] bg-[var(--white)] !text-[var(--light-blue)] border border-[var(--light-blue)] border-[2px] !m-[0] !mx-[5px]' label='Status'  />
+                    <FormButton cls='text-[.7em] w-[auto] !py-[2px] !m-[0] !mx-[5px] border border-[var(--light-blue)] border-[2px]' label='Set comment'  />
                 </div>
             </div>
         );

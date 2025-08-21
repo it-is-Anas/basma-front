@@ -8,7 +8,7 @@ export default function TeamCard({id,createdAt,members,tasks,title,user}:team){
         return (
             <div className="w-[90%]  p-[10px] rounded-[10px] my-[10px] mx-[auto] bg-[var(--gray)] flex items-center justify-around">
                 <div className=" mx-[10px] mr-[auto] mt-[10px] flex justify-start items-start">
-                    <img loading='lazy' src={profileImg} alt="" className="w-[2.5em]" />
+                    <img loading='lazy' src={profileImg} alt="" className="w-[2em] h-[2em] rounded-[50%]" />
                     <div className="h-[100%] ml-[10px]">
                         <p className="font-[600]">{ user.firstName } { user.lastName }</p>
                         <p className="font-[500] text-[.8em]">{ createdAt }</p>

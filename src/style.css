@@ -42,3 +42,18 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+
+.profile-text{
+    transform: translate(0%,-100%);
+    left: 12em;
+}
+@media (max-width: 767px) {
+    .center-transfrom{
+        transform: translate(-50%, -50%);
+    }
+    .profile-text{
+        left: 50%;
+        transform: translate(50%,-50%);
+    }
+}

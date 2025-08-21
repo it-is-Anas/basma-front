@@ -4,14 +4,16 @@ import coverImg from '../../../assets/cover.jpg';
 
 import useProfile from '../hooks/useProfile';
 
+
+
 export default function Profile(){
 
     const { filter, updateFilter , section } = useProfile();
     return (
         <div className=" grid grid-rows-[50%_1fr] overflow-x-scroll">
             <div className="bg-[var(--light-green)] relative">
-                <img loading='lazy' src={coverImg} alt="" className="w-[100%] h-[100%] object-cover absolute top-0 left-0" />
-                <img loading='lazy' src={profileIcon} alt="" className="absolute bottom-0 left-[1em] w-[10em] h-[10em] rounded-[50%]  " />
+                <img loading='lazy' src={coverImg} alt="" className="w-[100%] h-[100%] object-cover absolute top-0 left-0 max-[767px]:bg-[red]" />
+                <img loading='lazy' src={profileIcon} alt=""  className="absolute bottom-0 left-[1em] w-[10em] h-[10em] rounded-[50%] max-[767px]:w-[8em] max-[767px]:h-[8em]  max-[767px]:top-[50%]  max-[767px]:left-[50%] center-transfrom" />
                 <div style={{transform: 'translate(0%,-100%)'}} className="absolute bottom-[0em] left-[12em]">
                     <p className="font-[700] text-[1.3em]" >Maria Sharapove</p>
                     <p className="font-[500] text-[.7em]">Email@example.com</p>
@@ -25,9 +27,9 @@ export default function Profile(){
                     <FilterBtn label='Teams' click={()=>updateFilter('teams',3)} active={filter === 'teams'} />
                 </div>
             </div>
-            { section }
-            
-            
+            { section }            
         </div>
     );
 }
+
+

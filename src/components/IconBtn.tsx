@@ -15,7 +15,7 @@ export default function IconBtn({img='' , alt='' , cls = '',label='',link='',cls
         }
         return (
             <div onClick={clickHandler} className={"relative mx-[5px] "}>
-                <img loading='lazy' src={img} alt={alt} className={"w-[2em]  cursor-pointer "+actived+' '+cls} />
+                <img loading='lazy' src={img} alt={alt} className={"w-[2em] h-[2em] object-cover cursor-pointer "+actived+' '+cls} />
                 <div className={"absolute top-[-10px] font-[800] text-[tomato] right-0 "+clsLabel}>{label}</div>
             </div>
         );
@@ -23,13 +23,13 @@ export default function IconBtn({img='' , alt='' , cls = '',label='',link='',cls
     if(click)
         return (
             <div onClick={click} className="relative  cursor-pointer  mx-[5px]">
-                <img loading='lazy' src={img} alt={alt} className={"w-[2em]  "+cls} />
+                <img loading='lazy' src={img} alt={alt} className={"w-[2em] h-[2em] object-cover  "+cls} />
                 <div className={"absolute top-[-10px] font-[800] text-[tomato] right-0 "+clsLabel}>{label}</div>
             </div>
         );
     return (
         <div  className="relative mx-[5px]">
-            <img loading='lazy' src={img} alt={alt} className={"w-[2em]  "+cls} />
+            <img loading='lazy' src={img} alt={alt} className={"w-[2em] h-[2em] object-cover "+cls} />
             <div className={"absolute top-[-10px] font-[800] text-[tomato] right-0 "+clsLabel}>{label}</div>
         </div>
     );

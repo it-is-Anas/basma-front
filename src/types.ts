@@ -6,8 +6,8 @@ export interface HTML{
 export interface inputFiled {
     label?: string,
     type?: string,
-    placeholder?: string,
-    inputCls?: string,
+    placeholder?: string, 
+    inputCls?: string, 
     cls?: string,
 };
 
@@ -71,6 +71,8 @@ export interface task extends entity{
     catagory: string[],
     user: user,
     deadline: string,
+    type?: string,
+    toComment?: boolean,
 };
 export interface project extends entity{
     title: string,

@@ -24,7 +24,7 @@ export default function Header(){
                 {/* <IconBtn key='plus' img={plusIcon} cls='w-[1.2em]' /> */}
                 <CreateProductPopUp />
                 <NotificationPopUp />
-                <IconBtn key='profile' unactive={false} link="/user/profile" img={pofileIcon} />
+                <IconBtn key='profile' unactive={false} link="/user/profile" img={pofileIcon} cls=" rounded-[50%]" />
             </div>
         </header>
     );

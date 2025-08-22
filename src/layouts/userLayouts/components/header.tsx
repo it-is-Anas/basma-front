@@ -7,6 +7,8 @@ import searchIcon from '../../../assets/searchIcon.png';
 import AppLogo from "../../../components/appLogo";
 import NotificationPopUp from "../PopUps/Notification";
 import CreateProductPopUp from "../PopUps/CreateProduct";
+import CreateProjectPopUp from "../PopUps/CreateProject";
+import CreateTeamPopUp from "../PopUps/CreateTeam";
 
 
 export default function Header(){
@@ -23,6 +25,8 @@ export default function Header(){
                 <IconBtn key='search' img={searchIcon} cls='hidden max-[767px]:block w-[1.4em]' />
                 {/* <IconBtn key='plus' img={plusIcon} cls='w-[1.2em]' /> */}
                 <CreateProductPopUp />
+                <CreateProjectPopUp />
+                <CreateTeamPopUp />
                 <NotificationPopUp />
                 <IconBtn key='profile' unactive={false} link="/user/profile" img={pofileIcon} cls=" rounded-[50%]" />
             </div>

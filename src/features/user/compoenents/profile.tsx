@@ -4,17 +4,17 @@ import IconBtn from '../../../components/IconBtn';
 import projectImg from '../../../assets/cubeIcon.png';
 import taskImg from '../../../assets/taskIcon.png';
 import userImg from '../../../assets/userIcon.png';
-import useTask from "./useTask";
-import TaskCard from '../compoenents/taskCard';
-import useProject from "./useProject";
-import ProjectCard from '../compoenents/projectCard';
+import useTask from "../hooks/useTask";
+import TaskCard from './taskCard';
+import useProject from "../hooks/useProject";
+import ProjectCard from './projectCard';
 import useTeam from '../hooks/useTeam';
 import type { team } from '../../../types';
-import TeamCard from '../compoenents/teamCard';
+import TeamCard from './teamCard';
 
 
 
-export default function useProfile(){
+export default function ProfileSections(){
     const { tasks  } = useTask();
     const { projects } = useProject();
     const { teams } =useTeam();

@@ -2,13 +2,13 @@ import profileIcon from '../../../assets/profileIcon.png';
 import FilterBtn from '../../../components/Buttons/filterBtn';
 import coverImg from '../../../assets/cover.jpg';
 
-import useProfile from '../hooks/useProfile';
+import ProfileSections from '../compoenents/profile';
 
 
 
 export default function Profile(){
 
-    const { filter, updateFilter , section } = useProfile();
+    const { filter, updateFilter , section } = ProfileSections();
     return (
         <div className=" grid grid-rows-[50%_1fr] overflow-x-scroll">
             <div className="bg-[var(--light-green)] relative">

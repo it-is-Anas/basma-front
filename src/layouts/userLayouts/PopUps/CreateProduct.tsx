@@ -8,7 +8,7 @@ import FormButton from "../../../components/Buttons/formButton";
 import { useLocation } from "react-router-dom";
 
 
-export default function CreateProjectPopUp(){
+export default function CreateProductPopUp(){
 
     const [opened,setOpen] = useState<boolean>(false);
     const popup = useRef<HTMLDivElement | null>(null);
